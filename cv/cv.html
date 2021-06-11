@@ -28,9 +28,10 @@
             </table>
 <!--             <br> -->
             Motivierter Schüler mit Erfahrung und hohem Interesse an Physik, Mathematik, Elektronik und Informatik.<br>
+
         <h2 class="heading">Inhalt</h2>
-        <a href="#Bildung">Bildung</a>
         <div id="table_of_contents"></div>
+
         <h2 class="heading">Bildung</h2>
             <table style="width:100%">
                 <tr>
@@ -114,18 +115,24 @@
             </ul>
     </body>
     <script>
+        tof = document.getElementById("table_of_contents");
         Array.from(document.getElementsByClassName("heading")).forEach( header => {
             txt = header.innerText;
             header.innerHTML = "<a href=\"#"+txt+"\">"+
                 txt+
                 "<image class=\"icon\" src=\"icons/white_link.svg\"></image></a>";
             header.id = txt;
-//             header.onMouseover = function() {show_arrow(this)}
+
+            tof_element = '<a class="'+header.nodeName+'" href="\#'+
+                    txt+'\"><image class="icon" src="icons/black_goto.svg"></image> '+
+                    txt+
+                    '</a><br>';
+
+            tof.innerHTML += tof_element;
+
+            console.log(tof_element);
         });
-//         function show_arrow(element) {
-//             element.innerHTML = "<a href=\"#"+txt+"\"> ᐅfuck"+txt+"</a>";
-//             console.log(element);
-//         }
+
         console.log("hello world");
     </script>
 </html>
