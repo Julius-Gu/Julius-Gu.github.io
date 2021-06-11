@@ -1,0 +1,51 @@
+
+/* general formatting */
+body {
+    background-color: #ffffff;
+    font-family: 'Baloo Tammudu 2';
+    font-size: 30px;
+    padding: 20px;
+}
+.heading {
+    border: 12px;
+    border-style: none none none solid;
+    border-color: #ffffff60;
+}
+.heading * {
+    color: #ffffff;
+    padding-left: 10px;
+    text-decoration: none;
+}
+h1 {
+    background-color: #33575d;
+    font-size: 50px;
+}
+h2 {
+    background-color: #4c7278;
+    font-size: 40px;
+}
+h3 {
+    background-color: #88a4ad;
+    font-size: 35px;
+}
+.icon {
+    width: 35px;
+    display: none
+}
+
+
+/* tables */
+table, th, td {
+    border: 2px solid black;
+    font-weight: normal;
+}
+
+/* on hover */
+.heading:hover {
+    border: 16px;
+    border-style: none none none solid;
+    border-color: #ffffff90;
+}
+.heading:hover .icon {
+    display: inline;
+}
