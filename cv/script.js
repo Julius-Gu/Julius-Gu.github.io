@@ -40,7 +40,6 @@ function switch_theme() {
     dark_theme = !dark_theme;
 }
 
-switch_theme();
-switch_theme();
+window.onload = function() switch_theme();
 
 console.log("hello world");
