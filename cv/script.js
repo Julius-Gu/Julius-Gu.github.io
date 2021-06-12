@@ -1,5 +1,6 @@
 tof = document.getElementById("table_of_contents");
-Array.from(document.getElementsByClassName("heading")).forEach( header => {
+if(tof) {
+  Array.from(document.getElementsByClassName("heading")).forEach( header => {
     txt = header.innerText;
     header.innerHTML = "<a href=\"#"+txt+"\">"+
         txt+
@@ -13,8 +14,9 @@ Array.from(document.getElementsByClassName("heading")).forEach( header => {
 
     tof.innerHTML += tof_element;
     console.log(tof_element);
-});
-
+  });
+}
+    
 var dark_theme = false;
 document.documentElement.setAttribute('data-theme', 'light');
 function switch_theme() {
