@@ -3,11 +3,11 @@ Array.from(document.getElementsByClassName("heading")).forEach( header => {
     txt = header.innerText;
     header.innerHTML = "<a href=\"#"+txt+"\">"+
         txt+
-        "<image class=\"icon ico_link\" src=\"icons/light_link.svg\"></image></a>";
+        "<image class=\"icon ico_link\" src=\"/cv/icons/light_link.svg\"></image></a>";
     header.id = txt;
 
     tof_element = '<a class="'+header.nodeName+'" href="\#'+
-            txt+'\"><image class="icon ico_goto" src="icons/light_goto.svg"></image> '+
+            txt+'\"><image class="icon ico_goto" src="/cv/icons/light_goto.svg"></image> '+
             txt+
             '</a><br>';
 
@@ -20,7 +20,7 @@ document.documentElement.setAttribute('data-theme', 'light');
 function switch_theme() {
     if(dark_theme) {
         document.documentElement.setAttribute('data-theme', 'light');
-        document.getElementById("ico_theme").src = "icons/light_theme.svg";
+        document.getElementById("ico_theme").src = "/cv/icons/light_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
             icon.src="icons/light_link.svg";
         });
@@ -29,7 +29,7 @@ function switch_theme() {
         });
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById("ico_theme").src = "icons/dark_theme.svg";
+        document.getElementById("ico_theme").src = "/cv/icons/dark_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
             icon.src="icons/dark_link.svg";
         });
