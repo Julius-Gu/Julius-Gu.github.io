@@ -20,21 +20,21 @@ document.documentElement.setAttribute('data-theme', 'light');
 function switch_theme() {
     if(dark_theme) {
         document.documentElement.setAttribute('data-theme', 'light');
-        document.getElementById("ico_theme").src = "icons/light_theme.svg";
+        document.getElementById("ico_theme").src = "/cv/icons/light_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
-            icon.src="icons/light_link.svg";
+            icon.src="/cv/icons/light_link.svg";
         });
         Array.from(document.getElementsByClassName("ico_goto")).forEach( icon => {
-            icon.src="icons/light_goto.svg";
+            icon.src="/cv/icons/light_goto.svg";
         });
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById("ico_theme").src = "icons/dark_theme.svg";
+        document.getElementById("ico_theme").src = "/cv/icons/dark_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
-            icon.src="icons/dark_link.svg";
+            icon.src="/cv/icons/dark_link.svg";
         });
         Array.from(document.getElementsByClassName("ico_goto")).forEach( icon => {
-            icon.src="icons/dark_goto.svg";
+            icon.src="/cv/icons/dark_goto.svg";
         });
     }
     dark_theme = !dark_theme;
