@@ -40,6 +40,10 @@ function switch_theme() {
     dark_theme = !dark_theme;
 }
 
-window.onload = function {switch_theme()};
+// can only be called after some delay for some reason
+setTimeout(
+function() {
+    switch_theme();
+}, 200);
 
 console.log("hello world");
