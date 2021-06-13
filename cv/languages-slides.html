@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--txt-color);
+            font-family: 'Open Sans', sans-serif;;
+            font-size: 22px;
+            padding: 0px;
+            margin: 0px;
+            text-align: left
+/*             height: 400px; */
+        }
+        h1 {
+            font-size: 30px;
+        }
+        .icon {
+            height: inherit;
+            max-width: 100%;
+            border: none;
+/*             float: right; */
+        }
+        .slide {
+/*             width: 90%; */
+/*             height: 100%; */
+/*             display: inline; */
+            margin-left: 1%;
+            margin-right: 1%;
+            border-radius: 20px;
+            background-color: gray;
+/*             height: 100%; */
+            position: absolute;
+            left: 5.5%;
+            right: 5.5%;
+            top: 1px;
+            bottom: 1px;
+        }
+        .slide_changer {
+/*             display: inline; */
+            position:absolute;
+            top:0;
+            bottom: 0;
+            height:100%;
+            border: none;
+            border-radius: 20px;
+            background-color: gray;
+            width: 5%;
+/*             flex: 1; */
+        }
+        .slide_changer:hover {
+            background-color: lightgray;
+        }
+        .slide_changer:active {
+            background-color: green;
+        }
+        table {
+            height: 100%;
+        }
+        tr {
+            height: 100%;
+        }
+        th {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- slides -->
+
+<!-- python -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>Python</h1>
+            <p>Sehr gute Kenntnisse einer der am meisten verwendeten scripting Sprachen</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/python.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- rust -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>Rust</h1>
+            <p>Sehr gute Kenntnisse der flexiblen zero-cost-abstraction Sprache</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/rust.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- openscad -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>OpenScad</h1>
+            <p>Viel Erfahrung mit der Computer Aided Design Sprache OpenScad (link zu projekten?)</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/openscad.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- javascript -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>JavaScript</h1>
+            <p>gute Kenntnisse der #1 Sprache für interaktive Websites</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/javascript.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- java -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>Java</h1>
+            <p>gute Kenntnisse der Cross-Platform Sprache Java</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/java.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- html and css -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>HTML und CSS</h1>
+            <p>Viel Erfahrung mit den Sprachen, aus denen das Web besteht</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/htmlcss.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- cpp -->
+<div class="slide">
+<!-- please forgive me for using a table here -->
+<table style="border: none; padding:0.5%; width: 100%;">
+    <tr><th style="border: none;" align="left" style="border: none; width: 60%">
+            <h1>C++</h1>
+            <p>Mehrere Projekte mit der Low-Level Sprache C++</p>
+    </th><th  style="text-align: right; border: none; width:40%">
+        <img src="icons/cpp.svg" class="icon"></img>
+    </th></tr>
+</table>
+</div>
+
+<!-- controls -->
+<button class="slide_changer" id="prev" onclick="changeSlides(-1)" style="left: 0">←</button>
+<button class="slide_changer" id="next" onclick="changeSlides(1)" style="right: 0">→</button>
+</body>
+
+<script>
+var slideIndex = 0;
+showSlide(slideIndex);
+
+// Next/previous controls
+function changeSlides(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+//   var dots = document.getElementsByClassName("dot");
+  if (n >= slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length-1}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
+}
+</script>
+</html>
