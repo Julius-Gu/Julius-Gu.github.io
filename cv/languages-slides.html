@@ -5,9 +5,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
+
+
+
         body {
-            background-color: var(--bg-color);
-            color: var(--txt-color);
             font-family: 'Open Sans', sans-serif;;
             font-size: 22px;
             padding: 0px;
@@ -24,21 +25,29 @@
             border: none;
 /*             float: right; */
         }
-        .slide {
+        #slides_container {
 /*             width: 90%; */
 /*             height: 100%; */
 /*             display: inline; */
-            margin-left: 1%;
-            margin-right: 1%;
-            border-radius: 20px;
-            background-color: gray;
+            border-radius: 30px;
+            background: linear-gradient(to right, #7b92fc 0%, #f6bb87 100%);
 /*             height: 100%; */
             position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0;
+            bottom: 0;
+/*             transition: background 2s linear; */
+        }
+
+        .slide {
             left: 5.5%;
             right: 5.5%;
-            top: 1px;
-            bottom: 1px;
+            height: 100%;
+            position: absolute;
         }
+
+
         .slide_changer {
 /*             display: inline; */
             position:absolute;
@@ -47,15 +56,15 @@
             height:100%;
             border: none;
             border-radius: 20px;
-            background-color: gray;
             width: 5%;
+            background-color: #ffffff00;
 /*             flex: 1; */
         }
         .slide_changer:hover {
-            background-color: lightgray;
+            background-color: #ffffff90;
         }
         .slide_changer:active {
-            background-color: green;
+            background-color: #ffffffcc;
         }
         table {
             height: 100%;
@@ -69,8 +78,10 @@
     </style>
 </head>
 <body>
-<!-- slides -->
 
+<div id="slides_container">
+
+<!-- slides -->
 <!-- python -->
 <div class="slide">
 <!-- please forgive me for using a table here -->
@@ -163,29 +174,114 @@
 </div>
 
 <!-- controls -->
-<button class="slide_changer" id="prev" onclick="changeSlides(-1)" style="left: 0">←</button>
-<button class="slide_changer" id="next" onclick="changeSlides(1)" style="right: 0">→</button>
+<button class="slide_changer" id="prev" onclick="changeSlides(-1)" style="left: 0; transform: rotate(180deg)"><img style="width:100%" src="icons/black_increment.svg"></img></button>
+<button class="slide_changer" id="next" onclick="changeSlides(1)" style="right: 0"><img style="width:100%" src="icons/black_increment.svg"></img></button>
+
+</div>
 </body>
 
 <script>
 var slideIndex = 0;
-showSlide(slideIndex);
+var animationDuration = 700;
+
+
+var slides = document.getElementsByClassName("slide");
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+
+// show the first slide (timeout because javascript is shit)
+slides[0].style.display = "block";
 
 // Next/previous controls
 function changeSlides(n) {
-  showSlide(slideIndex += n);
+    if (n<=0) {
+        slide_out_animation(slideIndex, 'right');
+    } else {
+        slide_out_animation(slideIndex, 'left');
+    }
+
+    slideIndex += n;
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0) {slideIndex = slides.length-1}
+
+    if (n<=0) {
+        slide_in_animation(slideIndex,'left');
+    } else {
+        slide_in_animation(slideIndex,'right');
+    }
+    set_background(slideIndex);
 }
 
-function showSlide(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-//   var dots = document.getElementsByClassName("dot");
-  if (n >= slides.length) {slideIndex = 0}
-  if (n < 0) {slideIndex = slides.length-1}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex].style.display = "block";
+function slide_out_animation(n, /*to*/ direction) {
+    var destination = '';
+    if (direction == 'left') {
+        destination = 'translateX(-110%)';
+    } else {
+        destination = 'translateX(110%)';
+    }
+    var slide = document.getElementsByClassName("slide")[n];
+    slide.animate( [
+            {transform: 'translateX(0)', easing: 'ease-out'},
+            {transform: destination, easing: 'ease-out'},
+        ], {
+            duration: animationDuration,
+        }
+    );
+    setTimeout(function() {slide.style.display = "none"}, animationDuration);
 }
+
+function slide_in_animation(n, /*from*/ direction) {
+    var beginning = '';
+    if (direction == 'left') {
+        beginning = 'translateX(-110%)';
+    } else {
+        beginning = 'translateX(110%)';
+    }
+    var slide = document.getElementsByClassName("slide")[n];
+    slide.style.display = "block";
+    slide.animate( [
+            {transform: beginning, easing: 'ease-in'},
+            {transform: 'translateX(0)', easing: 'ease-in' },
+        ], {
+            duration: animationDuration,
+        }
+    );
+}
+
+
+// background color gradient
+var colors = [
+// python
+[ '#7b92fc' , '#f6bb87' ],
+// rust
+[ '#ca5e5e' , '#b25a27' ],
+// openscad
+[ '#6fa9e7' , '#fff893' ],
+// javascript
+[ '#ffd56b' , '#797979' ],
+// java
+[ '#5cc1ff' , '#ffa76c' ],
+// html and css2
+[ '#ff3300' , '#86b0ff' ],
+// cpp
+[ '#aaffff' , '#8cd7ff' ],
+];
+
+function set_background(n) {
+    var sc = document.getElementById("slides_container");
+    var new_gradient = "linear-gradient(to right, "+colors[n][0]+" 0%, "+colors[n][1]+" 100%)"
+    sc.style.background = new_gradient;
+    sc.animate( [
+            {},
+            {opacity: "0.8"},
+            {opacity: "1"},
+        ], {
+            duration: animationDuration,
+        }
+    );
+//     setTimeout(function() {sc.style.background = new_gradient}, animationDuration);
+}
+
 </script>
 </html>
