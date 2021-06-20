@@ -1,5 +1,5 @@
-tof = document.getElementById("table_of_contents");
-if(tof) {
+try {
+    tof = document.getElementById("table_of_contents");
   Array.from(document.getElementsByClassName("heading")).forEach( header => {
     txt = header.innerText;
     header.innerHTML = "<a href=\"#"+txt+"\">"+
@@ -15,6 +15,9 @@ if(tof) {
     tof.innerHTML += tof_element;
     console.log(tof_element);
   });
+}
+catch(e) {
+    console.log("no tof");
 }
     
 var dark_theme = false;
@@ -33,7 +36,7 @@ function switch_theme() {
         document.documentElement.setAttribute('data-theme', 'dark');
         document.getElementById("ico_theme").src = "/cv/icons/dark_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
-            icon.src="/cv/icons/light_link.svg";
+            icon.src="/cv/icons/dark_link.svg";
         });
         Array.from(document.getElementsByClassName("ico_goto")).forEach( icon => {
             icon.src="/cv/icons/dark_goto.svg";
