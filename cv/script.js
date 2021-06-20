@@ -33,7 +33,7 @@ function switch_theme() {
         document.documentElement.setAttribute('data-theme', 'dark');
         document.getElementById("ico_theme").src = "/cv/icons/dark_theme.svg";
         Array.from(document.getElementsByClassName("ico_link")).forEach( icon => {
-            icon.src="/cv/icons/dark_link.svg";
+            icon.src="/cv/icons/light_link.svg";
         });
         Array.from(document.getElementsByClassName("ico_goto")).forEach( icon => {
             icon.src="/cv/icons/dark_goto.svg";
