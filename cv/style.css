@@ -1,16 +1,16 @@
 /* light and dark theme */
 [data-theme="dark"] {
-    --bg-color: #38384f;
+    --bg-color: #1b284f;
     --txt-color: #FFFFFF;
-    --bt-bg-color: #9696d4;
-    --bt-bg-color-hover: #7878aa;
-    --nav-bar-color: #000000;
-    --nav-bar-bg-color: #b4b4ff;
-    --hone-bg-color: #9999d9;
-    --htwo-bg-color: #8b8bc5;
-    --hthree-bg-color: #7c7cb0;
-    --tof-bg-color: #484866;
-    --tof-border-color: #59597d;
+    --bt-bg-color: #81afdf;
+    --bt-bg-color-hover: #6183a7;
+    --nav-bar-color: #ffffff;
+    --nav-bar-bg-color: #000027;
+    --hone-bg-color: #1b284f;
+    --htwo-bg-color: #223263;
+    --hthree-bg-color: #283b75;
+    --tof-bg-color: #283c76;
+    --tof-border-color: #364463;
 }
 [data-theme="light"] {
     --bg-color: #caf0fa;
