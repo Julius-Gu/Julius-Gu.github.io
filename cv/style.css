@@ -115,6 +115,10 @@ h3 .icon {width: 20px;}
     font-size: 21px;
     padding-left: 40px;
 }
+a {
+    color: var(--txt-color);
+}
+
 
 /* tables */
 th, td {
