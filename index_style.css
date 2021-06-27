@@ -4,4 +4,10 @@ body {
 
 .grid_container {
   display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2%;
+  background-color: gray;
+}
+.grid_item {
+  corner-radius: 5px;
 }
