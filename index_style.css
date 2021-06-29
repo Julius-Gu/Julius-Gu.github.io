@@ -1,5 +1,5 @@
 body {
-  background-color: blue;
+  background-color: #1b284f;
   font-size: 45px;
 }
 
@@ -7,7 +7,8 @@ body {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 2%;
-  background-color: gray;
+  padding: 2%;
+  background-color: #000027;
   height: 300px;
 }
 .grid_item {
