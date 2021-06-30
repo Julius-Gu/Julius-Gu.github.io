@@ -20,7 +20,7 @@ catch(e) {
     console.log("no tof");
 }
     
-var dark_theme = false;
+var dark_theme = true;
 document.documentElement.setAttribute('data-theme', 'light');
 function switch_theme() {
     if(dark_theme) {
@@ -50,5 +50,31 @@ setTimeout(
 function() {
     switch_theme();
 }, 200);
+
+// make the language button change language
+var language = "de";
+function change_language(lang) {
+    Array.from(document.getElementsByClassName("en")).forEach( element => {
+        if (language==="en") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }));
+    Array.from(document.getElementsByClassName("de")).forEach( element => {
+        if (language==="de") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }));
+}
+try {
+    var language_bt = document.getElementById("language");
+    language_bt.onclick = function () {change_language("en")};
+}
+catch(e) {
+    console.log("no lang");
+}
 
 console.log("hello world");
