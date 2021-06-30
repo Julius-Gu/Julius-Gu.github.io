@@ -60,14 +60,14 @@ function change_language(lang) {
         } else {
             element.style.display = "none";
         }
-    }));
+    });
     Array.from(document.getElementsByClassName("de")).forEach( element => {
         if (language==="de") {
             element.style.display = "block";
         } else {
             element.style.display = "none";
         }
-    }));
+    });
 }
 try {
     var language_bt = document.getElementById("language");
