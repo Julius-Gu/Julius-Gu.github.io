@@ -78,10 +78,10 @@ button:hover {
     margin: 50px;
 }
 .heading {
-    border: 24px;
+    border: 50px;
     border-style: none none none solid;
     border-color: #ffffff60;
-    border-radius: 20px;
+    border-radius: 45px;
 }
 .heading * {
     color: var(--nav-bar-color);
@@ -144,7 +144,7 @@ th, td {
 
 /* on hover */
 .heading:hover {
-    border: 20px;
+    border: 60px;
     border-style: none none none solid;
     border-color: #ffffff90;
 }
