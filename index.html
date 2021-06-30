@@ -19,11 +19,28 @@
         <p>this will include my Projects and Tutorials in the future.</p>
         <p>You can also read my Curriculum Vitae in german <a href="./cv/cv.html">here</a>.</p>
         <div class="grid_container">
-        <button class="grid_item">Projekte</button>
-        <a href="./cv/cv.html"><button class="grid_item">Lebenslauf</button></a>
-        <button class="grid_item">Kontakt</button>
+          <button id="projects" class="grid_item">Projekte</button>
+          <a href="./cv/cv.html"><button class="grid_item">Lebenslauf</button></a>
+          <button class="grid_item">Kontakt</button>
+        </div>
+        <div id="projects_container">
+          <h2 class="heading">Fertig</h2>
+          <a href="./projects/wseminar.pdf">
         </div>
     </div>
 </body>
 <script src="./cv/script.js"></script>
+<script>
+  var projects_bt = document.getElementById("projects");
+  var projects_visible = false;
+  var projects_container = document.getElementById("projects_container");
+  projects_bt.onclick = function () {
+    projects_visible = !projects_visible;
+    if(projects_visible) {
+      projects_container.style.display = "block";
+    } else {
+      projects_container.style.display = "none";
+    }
+  }
+</script>
 </html>
