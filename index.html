@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+  <title>Julius' personal Website</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./webstyle.css">
+  <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+    <div id="top_nav_bar" class="webonly">
+        <p>Julius' Website</p>
+        <button onclick="switch_theme()"><img id="ico_theme" src="icons/light_theme.svg" style="height: 100%;"></button>
+        <div id="dropdown">
+            <button id="language"><img src="icons/dark_lang.svg" style="height: 100%;"></button>
+            <div class="language-dropdown">
+                <button  onclick="change_language('en')"><img src="icons/english_flag.svg" style="height: 100%;"></button>
+                <button  onclick="change_language('de')"><img src="icons/german_flag.svg" style="height: 100%;"></button>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 class="heading en">Welcome to my personal Website</h1>
+        <h1 class="heading de">Willkommen auf meiner Website</h1>
+        <p class="en">this will include my Projects and Tutorials in the future.</p>
+        <p class="de">hier werden bald Tutorial und Projekte von mir sein.</p>
+        <p>You can also read my Curriculum Vitae in german <a href="./cv/cv.html">here</a>.</p>
+        <div class="grid_container">
+          <button id="projects" class="grid_item en">projects</button>
+          <button id="projects" class="grid_item de">Projekte</button>
+          <a href="./cv/cv.html" class="en"><button class="grid_item">Curriculum Vitae</button></a>
+          <a href="./cv/cv.html" class="de"><button class="grid_item">Lebenslauf</button></a>
+          <button class="grid_item en">contact</button>
+          <button class="grid_item de">Kontakt</button>
+        </div>
+        <div id="projects_container" style="display: none">
+          <a class="en" href="./projects/wseminar.pdf">W-Seminar Arbeit (in German)</a>
+          <a class="de" href="./projects/wseminar.pdf">W-Seminar Arbeit</a>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script>
+
+</script>
+</html>

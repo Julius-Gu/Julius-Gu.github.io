@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+    <title>Curriculum Vitae</title>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../webstyle.css">
+    </head>
+    <body>
+        <!-- top nav Bar-->
+        <div class="webonly" id="top_nav_bar">
+            <p>Lebenslauf / Curriculum Vitae</p>
+            <button onclick="switch_theme()"><img id="ico_theme" src="/icons/light_theme.svg" style="height: 100%;"/></button>
+            <button onclick="print_page()"><img src="/icons/print.svg" style="height: 100%;"/></button>
+            <div id="dropdown">
+            <button id="language"><img src="/icons/dark_lang.svg" style="height: 100%;"></button>
+            <div class="language-dropdown">
+                <button  onclick="change_language('en')"><img src="/icons/english_flag.svg" style="height: 100%;"></button>
+                <button  onclick="change_language('de')"><img src="/icons/german_flag.svg" style="height: 100%;"></button>
+            </div>
+        </div>
+        </div>
+
+<!--         <h3 class="heading">Lebenslauf</h3> -->
+        <div id="content">
+            <h1 class="heading de">Persönliche Details</h1>
+            <h1 class="heading en">Personal Details</h1>
+                <table style="width:100%; border: none">
+                    <tr><th align="left" style="width: 60%; border: none">
+                        <div class="de" style="float: left">
+                        Julius Guthunz<br>
+                        E-mail.: julius.guthunz@protonmail.com<br>
+                        Geburtsdatum: 24.09.2002
+                        <p class="printonly mono">website: Julius-Gu.github.io</p>
+                        </div>
+                        <div class="en" style="float: left">
+                        Julius Guthunz<br>
+                        E-mail.: julius.guthunz@protonmail.com<br>
+                        Birthdate: 24.09.2002
+                        <p class="printonly mono">website: Julius-Gu.github.io</p>
+                        </div><br>
+                    </th><th  align="right" style="border: none; width: 40%">
+                        <image style=" width: 100%;" src="Foto.png">
+                    </th></tr>
+                </table>
+    <!--             <br> -->
+                <p class="de">Motivierter Student mit Erfahrung und hohem Interesse an Physik, Mathematik, Elektronik und Informatik. Momentan Physikstudent in Nancy.</p>
+                <p class="en">Motivated Student with some experience in physics, maths, electronics and IT. Currently studying physics in Nancy.</p>
+
+            <h1 class="heading">Inhalt</h1>
+            <div id="table_of_contents"></div>
+
+            <h1 class="heading">Bildung</h1>
+                <table style="width:100%">
+                    <tr>
+                        <th>2012-2021</th>
+                        <th>Ohm-Gymnasium Erlangen</th>
+                    </tr>
+                    <tr>
+                        <th>2018-2019</th>
+                        <th>Lycée André Argouges Grenoble (Première)</th>
+                    </tr>
+                    <tr>
+                        <th> Januar - März 2018</th>
+                        <th>Wellington Boys' College (11th class, Schüleraustausch)</th>
+                    </tr>
+                    <tr>
+                        <th>Sommer 2016</th>
+                        <th>Language School Broadstairs, England</th>
+                    </tr>
+                    <tr>
+                        <th>August-September 2015</th>
+                        <th>Aufenthalt in Riverside, California (Schüleraustausch)</th>
+                    </tr>
+                    <tr>
+                        <th>2008-2012</th>
+                        <th>Michael Poeschke Grundschule</th>
+                    </tr>
+                </table>
+            <h1 class="heading">Kompetenzen</h1>
+                <h2 class="heading">Sprachen</h2>
+                <ul>
+                    <li>Deutsch (Muttersprache)</li>
+                    <li>Englisch (Sehr gutes Niveau)</li>
+                    <ul>
+                        <li>Camebridge Assesment English March 2020 (im Anhang)</li>
+                        <ul>
+                            <li>Overall Score:	200 (C2)</li>
+                            <li>Reading:		210/210 (C2)</li>
+                            <li>Use of English:	201/210 (C2)</li>
+                            <li>Writing:		183/210 (C1)</li>
+                            <li>Listening:		200/210 (C2)</li>
+                            <li>Speaking:		208/210 (C2)</li>
+                        </ul>
+                    </ul>
+                    <li>Französisch (Sehr gutes Niveau)</li>
+                    <ul>
+                        <li>Diplôme d'études en langue française B1 Septembre 2017 (im Anhang)</li>
+                        <ul>
+                            <li>Production écrite:		19,50/25</li>
+                            <li>Compréhension écrite:	17,50/25</li>
+                            <li>Production orale:		17,50/25</li>
+                            <li>Compréhension orale:	11,50/25</li>
+                        </ul>
+                        <li>Baccalauréat Général dans le programme AbiBac : 15,3 <a href="./cv_attach/abitur-abibac.html">(Nachweis)</a></li>
+                        <ul>
+                           <ul>
+                                <li>Français Écrit : 16,0/20</li>
+                                <li>Français Oral :  16,0/20</li>
+                                <li>Histoire :       11,0/20</li>
+                                <li>SES :            14,4/20</li>
+                            </ul>
+                            <li>Moyenne des quatre disciplines de Baccalauréat : 14,4/20</li>
+                            <ul>
+                                <li>5e épreuve de l'«Abitur» :      14,4/20</li>
+                                <li>Résultat du W- ou P-séminaire : 20,0/20</li>
+                            </ul>
+                        </ul>
+                        <li>Mention : bien</li>
+                    </ul>
+                </ul>
+                <h2 class="heading">Computersprachen</h2>
+                <iframe class="webonly" src="languages-slides.html" style="border: none; width: 100%; height: 320px; overflow: hidden" scrolling="no"></iframe>
+                <ol class="printonly">
+                    <li>Python (sehr gut)</li>
+                    <li>Rust (sehr gut)</li>
+                    <li>Openscad (sehr gut)</li>
+                    <li>Java (sehr gut)</li>
+                    <li>HTML (sehr gut)</li>
+                    <li>CSS (sehr gut)</li>
+                    <li>JavaScript (gut)</li>
+                    <li>C++ (gut)</li>
+                </ol>
+                <h2 class="heading">Projekte und Preise</h2>
+                <ul>
+                    <li>Zeichenplotter in Teamarbeit <a href="./cv_attach/plotter.html">(mehr Informationen)</a></li>
+                    <li>Erster Platz in RoboCup Jnr Kategorie Maze in Teamarbeit <a href="./cv_attach/robocup.html">(Urkunde)</a></li>
+                    <li>USB-Tastatur mit französischen spezial Charakteren (link und Anhang)</li>
+                    <!--<li>Druckerkabel Multiplexer (link und Anhang)</li>-->
+                    <li>Arduino Rubberduckey um Präsentationen in Echtzeit vorne zu präsentieren(link)</li>
+                    <li>Schulgong für Lockdown (link)</li>
+                    <li>TPE-Braille (link)</li>
+                </ul>
+                <h2 class="heading">Professionelle Erfahrung</h2>
+                <ul>
+                    <li>17.06.2019-14.08.2019 Praktikum: Virtual Reality Entwicklung bei 4D View Solutions SAS (Anhang)</li>
+                    <li>Einwöchiges Schulpraktikum: Webprogrammierung bei Sympalog Voice Solutions GmbH</li>
+                </ul>
+                <h3 class="heading">test</h3>
+            </div>
+    </body>
+    <script src="../script.js"></script>
+</html>

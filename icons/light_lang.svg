@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866666 33.866668"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="light_lang.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="128px"
+     inkscape:zoom="2.9897026"
+     inkscape:cx="3.3448143"
+     inkscape:cy="86.128969"
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:19.7898px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.494744"
+       x="4.3344355"
+       y="16.824823"
+       id="text1772"><tspan
+         sodipodi:role="line"
+         id="tspan1770"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.494744"
+         x="4.3344355"
+         y="16.824823">J</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.1695px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.629241"
+       x="17.223816"
+       y="32.466339"
+       id="text2054"><tspan
+         sodipodi:role="line"
+         id="tspan2052"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.629241"
+         x="17.223816"
+         y="32.466339">и</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:round"
+       id="path6696"
+       sodipodi:type="arc"
+       sodipodi:cx="16.169094"
+       sodipodi:cy="17.366104"
+       sodipodi:rx="12.191407"
+       sodipodi:ry="12.191407"
+       sodipodi:start="1.6208116"
+       sodipodi:end="2.568007"
+       sodipodi:arc-type="arc"
+       d="m 15.559592,29.542266 a 12.191407,12.191407 0 0 1 -9.6308,-5.560527"
+       sodipodi:open="true" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:round"
+       id="path7004"
+       sodipodi:type="arc"
+       sodipodi:cx="16.169094"
+       sodipodi:cy="17.366104"
+       sodipodi:rx="12.191407"
+       sodipodi:ry="12.191407"
+       sodipodi:start="4.5613113"
+       sodipodi:end="6.2663993"
+       sodipodi:arc-type="arc"
+       d="m 14.334243,5.3135637 a 12.191407,12.191407 0 0 1 9.702435,2.7395643 12.191407,12.191407 0 0 1 4.322106,9.108341"
+       sodipodi:open="true" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 5.928792,23.981739 8.1885368,22.675661"
+       id="path7174" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 25.39937,17.162673 2.959414,-0.0012"
+       id="path7310"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
