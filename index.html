@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="index_style.css">
 </head>
 <body>
-    <div id="top_nav_bar">
+    <div id="top_nav_bar" class="webonly">
         <p>Julius' Website</p>
         <button onclick="switch_theme()"><img id="ico_theme" src="icons/light_theme.svg" style="height: 100%;"/></button>
-        <button id="language"><img src="icons/light_theme.svg" style="height: 100%;"/>language bs</button>
+        <button id="language"><img id="ico_theme" src="icons/light_theme.svg" style="height: 100%;"/>language</button>
     </div>
     <div id="content">
         <h1 class="heading en">Welcome to my personal Website</h1>
@@ -37,16 +37,6 @@
 </body>
 <script src="./cv/script.js"></script>
 <script>
-  var projects_bt = document.getElementById("projects");
-  var projects_visible = false;
-  var projects_container = document.getElementById("projects_container");
-  projects_bt.onclick = function () {
-    projects_visible = !projects_visible;
-    if(projects_visible) {
-      projects_container.style.display = "block";
-    } else {
-      projects_container.style.display = "none";
-    }
-  }
+  
 </script>
 </html>
